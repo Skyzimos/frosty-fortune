@@ -277,12 +277,14 @@
             One play per device.
             Results are final.
             <br>
-            <a href="/frosty-fortune/tos">View Full Terms of Service</a> · <a href="/frosty-fortune/privacy">Privacy Policy</a>
+            <a href="/frosty-fortune/tos">View Full Terms of Service</a> · <a href="/frosty-fortune/privacy">Privacy
+                Policy</a>
         </div>
     </div>
 
     <p class="footer-note">
-        © 2025 Swagstakes — All Rights Reserved · <a href="/frosty-fortune/privacy">Privacy Policy</a> · <a href="/frosty-fortune">Contact</a>
+        © 2025 Swagstakes — All Rights Reserved · <a href="/frosty-fortune/privacy">Privacy Policy</a> · <a
+            href="/frosty-fortune">Contact</a>
     </p>
 
     <script>
@@ -387,9 +389,11 @@
                 const winEmoji = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
                 chosenEmojis = [winEmoji, winEmoji, winEmoji];
             } else {
-                for (let i = 0; i < 3; i++) {
-                    chosenEmojis.push(EMOJIS[Math.floor(Math.random() * EMOJIS.length)]);
-                }
+                let e1 = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
+                let e2;
+                do { e2 = EMOJIS[Math.floor(Math.random() * EMOJIS.length)]; } while (e2 === e1);
+                let e3 = EMOJIS[Math.floor(Math.random() * EMOJIS.length)];
+                chosenEmojis = [e1, e2, e3];
             }
 
             for (let i = 0; i < 3; i++) {
